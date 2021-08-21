@@ -1,0 +1,92 @@
+@import "variables/variables";
+@import "fonts/fonts";
+@import "button/btn";
+@import "responsive/responsive";
+
+@mixin displayFlexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $bg-heading-btn;
+  @include displayFlexCenter();
+}
+
+.container {
+  width: 50%;
+  min-height: 50%;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .col {
+    flex: 0 0 33.33%;
+    max-width: 33.33;
+
+    .col-inner {
+      height: 100%;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      span {
+        display: block;
+        font-family: "Big Shoulders Display", cursive;
+        text-transform: uppercase;
+        color: $bg-heading-btn;
+        font-size: 40px;
+        margin: 20px 0;
+      }
+
+      p {
+        min-height: 230px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: $paragraphs;
+        line-height: 1.8;
+        font-family: "Lexend Deca", sans-serif;
+        width: 80%;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bg-orange {
+  background: $brightOrange;
+
+  a {
+    color: $brightOrange;
+  }
+}
+
+.bg-cyan {
+  background: $darkCyan;
+
+  a {
+    color: $darkCyan;
+  }
+}
+
+.bg-darkCyan {
+  background: $veryDarkCyan;
+
+  a {
+    color: $veryDarkCyan;
+  }
+}
